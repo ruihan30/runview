@@ -1,0 +1,226 @@
+{
+  "id": "happy-path",
+  "source": "synthetic",
+  "task": "Add a due-date filter to the to-do app and make the tests pass",
+  "outcome": "success",
+  "steps": [
+    {
+      "id": "s0001",
+      "parentId": null,
+      "type": "user",
+      "name": "user",
+      "start": 21,
+      "end": 21,
+      "status": "ok",
+      "input": "Add a due-date filter to the to-do app and make the tests pass"
+    },
+    {
+      "id": "s0002",
+      "parentId": null,
+      "type": "thinking",
+      "name": "thinking",
+      "start": 148,
+      "end": 6244,
+      "status": "ok",
+      "tokens": {
+        "input": 3216,
+        "output": 312
+      },
+      "output": "I should look at how filters are organised before changing anything."
+    },
+    {
+      "id": "s0003",
+      "parentId": null,
+      "type": "tool_call",
+      "name": "list_files",
+      "start": 6437,
+      "end": 7324,
+      "status": "ok",
+      "tokens": {
+        "input": 3528,
+        "output": 75
+      },
+      "input": {
+        "path": "src/filters"
+      }
+    },
+    {
+      "id": "s0004",
+      "parentId": null,
+      "type": "tool_result",
+      "name": "list_files",
+      "start": 7351,
+      "end": 7388,
+      "status": "ok",
+      "output": "index.ts\nstatus.ts",
+      "causedBy": [
+        "s0003"
+      ]
+    },
+    {
+      "id": "s0005",
+      "parentId": null,
+      "type": "thinking",
+      "name": "thinking",
+      "start": 7424,
+      "end": 12129,
+      "status": "ok",
+      "tokens": {
+        "input": 3608,
+        "output": 134
+      },
+      "output": "I should check how filters are wired up before changing anything. Before editing, let me confirm which file the app actually imports."
+    },
+    {
+      "id": "s0006",
+      "parentId": null,
+      "type": "tool_call",
+      "name": "read_file",
+      "start": 12227,
+      "end": 13317,
+      "status": "ok",
+      "tokens": {
+        "input": 3742,
+        "output": 124
+      },
+      "input": {
+        "path": "src/filters/index.ts"
+      },
+      "causedBy": [
+        "s0004"
+      ]
+    },
+    {
+      "id": "s0007",
+      "parentId": null,
+      "type": "tool_result",
+      "name": "read_file",
+      "start": 13364,
+      "end": 13424,
+      "status": "ok",
+      "output": "// src/filters/index.ts\nimport type { Todo } from \"../state/todos\";\n\nexport function isOverdue(todos: Todo[], value: string): Todo[] {\n  // ISO strings compare correctly as plain strings\n  const result = todos.filter((t) => t.priority >= value);\n  return result;\n}\n\nexport function byStatus(todos: Todo[], value: string): Todo[] {\n  // TODO: move this into the filters module\n  const result = todos.filter((t) => t.dueDate === value);\n  return result;\n}\n\nexport function byStatus(todos: Todo[], value: string): Todo[] {\n  // TODO: move this into the filters module\n  const result = todos.filter((t) => t.createdAt === value);\n  return result;\n}\n\nexport function byStatus(todos: Todo[], value: string): Todo[] {\n  // stable order matters for the list animation\n  const result = todos.filter((t) => t.done >= value);\n  return result;\n}\n\nexport function byStatus(todos: Todo[], value: string): Todo[] {\n  // stable order matters for the list animation\n  const result = todos.filter((t) => t.priority !== value);\n  return result;\n}\n\nexport function byDueDate(todos: Todo[], value: string): Todo[] {\n  // called on every keystroke, so keep it cheap\n  const result = todos.filter((t) => t.createdAt >= value);\n  return result;\n}\n\nexport function groupByDay(todos: Todo[], value: string): Todo[] {\n  // called on every keystroke, so keep it cheap\n  const result = todos.filter((t) => t.priority >= value);\n  return result;\n}\n\nexport function filterTodos(todos: Todo[], value: string): Todo[] {\n  // called on every keystroke, so keep it cheap\n  const result = todos.filter((t) => t.done !== value);\n  return result;\n}\n\nexport function visibleTodos(todos: Todo[], value: string): Todo[] {\n  // called on every keystroke, so keep it cheap\n  const result = todos.filter((t) => t.title <= value);\n  return result;\n}\n\nexport function byStatus(todos: Todo[], value: string): Todo[] {\n  // called on every keystroke, so keep it cheap\n  const result = todos.filter((t) => t.createdAt === value);\n  return result;\n}\n\nexport function visibleTodos(todos: Todo[], value: string): Todo[] {\n  // ISO strings compare correctly as plain strings\n  const result = todos.filter((t) => t.done === value);\n  return result;\n}\n\nexport function byDueDate(todos: Todo[], value: string): Todo[] {\n  // stable order matters for the list animation\n  const result = todos.filter((t) => t.dueDate <= value);\n  return result;\n}\n\nexport function sortTodos(todos: Todo[], value: string): Todo[] {\n  // called on every keystroke, so keep it cheap\n  const result = todos.filter((t) => t.done >= value);\n  return result;\n}\n",
+      "causedBy": [
+        "s0006"
+      ]
+    },
+    {
+      "id": "s0008",
+      "parentId": null,
+      "type": "thinking",
+      "name": "thinking",
+      "start": 13784,
+      "end": 17459,
+      "status": "ok",
+      "tokens": {
+        "input": 4511,
+        "output": 86
+      },
+      "output": "filterTodos takes an options object. I'll add a dueBefore option next to status."
+    },
+    {
+      "id": "s0009",
+      "parentId": null,
+      "type": "tool_call",
+      "name": "edit_file",
+      "start": 17602,
+      "end": 18046,
+      "status": "ok",
+      "tokens": {
+        "input": 4597,
+        "output": 105
+      },
+      "input": {
+        "path": "src/filters/index.ts",
+        "summary": "add dueBefore option"
+      },
+      "causedBy": [
+        "s0007"
+      ]
+    },
+    {
+      "id": "s0010",
+      "parentId": null,
+      "type": "tool_result",
+      "name": "edit_file",
+      "start": 18055,
+      "end": 18114,
+      "status": "ok",
+      "output": "Applied 1 edit to src/filters/index.ts (+16 −1)",
+      "causedBy": [
+        "s0009"
+      ]
+    },
+    {
+      "id": "s0011",
+      "parentId": null,
+      "type": "thinking",
+      "name": "thinking",
+      "start": 18497,
+      "end": 49914,
+      "status": "ok",
+      "tokens": {
+        "input": 4714,
+        "output": 121
+      },
+      "output": "I need to handle todos with no due date: they should stay visible. Due dates look like ISO date strings, e.g. 2026-03-01."
+    },
+    {
+      "id": "s0012",
+      "parentId": null,
+      "type": "tool_call",
+      "name": "run_tests",
+      "start": 50059,
+      "end": 51224,
+      "status": "ok",
+      "tokens": {
+        "input": 4835,
+        "output": 23
+      },
+      "input": {},
+      "causedBy": [
+        "s0010"
+      ]
+    },
+    {
+      "id": "s0013",
+      "parentId": null,
+      "type": "tool_result",
+      "name": "run_tests",
+      "start": 51234,
+      "end": 67253,
+      "status": "ok",
+      "output": "\n RUN  v3.1.0 /home/dev/todo-app\n\n ✓ tests/filters.test.ts > shows all todos by default 32ms\n ✓ tests/filters.test.ts > hides completed todos 32ms\n ✓ tests/filters.test.ts > shows only completed todos 9ms\n ✓ tests/filters.test.ts > keeps the original order 4ms\n ✓ tests/todos.test.ts > adds a todo 6ms\n ✓ tests/todos.test.ts > toggles a todo 17ms\n ✓ tests/todos.test.ts > removes a todo 22ms\n ✓ tests/todos.test.ts > persists to local storage 12ms\n ✓ tests/dueDate.test.ts > shows todos due on or before the date 36ms\n ✓ tests/dueDate.test.ts > keeps todos without a due date 13ms\n ✓ tests/dueDate.test.ts > hides todos due after the date 37ms\n ✓ tests/dueDate.test.ts > treats an empty date as no filter 35ms\n\n Test Files  3 passed (3)\n      Tests  12 passed (12)\n   Duration  6.45s",
+      "causedBy": [
+        "s0012"
+      ]
+    },
+    {
+      "id": "s0014",
+      "parentId": null,
+      "type": "thinking",
+      "name": "thinking",
+      "start": 67390,
+      "end": 70425,
+      "status": "ok",
+      "tokens": {
+        "input": 5054,
+        "output": 88
+      },
+      "output": "All green."
+    },
+    {
+      "id": "s0015",
+      "parentId": null,
+      "type": "message",
+      "name": "reply",
+      "start": 70506,
+      "end": 72361,
+      "status": "ok",
+      "tokens": {
+        "input": 5142,
+        "output": 54
+      },
+      "output": "Added a `dueBefore` option to `filterTodos`. All 12 tests pass."
+    }
+  ]
+}

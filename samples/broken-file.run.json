@@ -1,0 +1,275 @@
+{
+  "id": "broken-file",
+  "source": "synthetic",
+  "task": "Add a due-date filter to the to-do app and make the tests pass",
+  "outcome": "success",
+  "steps": [
+    {
+      "id": "s0001",
+      "parentId": null,
+      "type": "user",
+      "name": "user",
+      "start": 369,
+      "end": 369,
+      "status": "ok",
+      "input": "Add a due-date filter to the to-do app and make the tests pass"
+    },
+    {
+      "id": "s0002",
+      "parentId": null,
+      "type": "thinking",
+      "name": "thinking",
+      "start": 8348,
+      "end": 16764,
+      "status": "ok",
+      "tokens": {
+        "input": 3216,
+        "output": 107
+      },
+      "output": "The lint config is strict about unused imports, so I'll clean those up. The tests use a fixed list of five todos, which makes the expected counts easy to work out. The tests use a fixed list of five todos, which makes the expected counts easy to work out."
+    },
+    {
+      "id": "s0003",
+      "parentId": null,
+      "type": "tool_call",
+      "name": "read_file",
+      "start": 16953,
+      "end": 18364,
+      "status": "ok",
+      "tokens": {
+        "input": 3323,
+        "output": 71
+      },
+      "input": {
+        "path": "src/filters/index.ts"
+      }
+    },
+    {
+      "id": "s0004",
+      "parentId": null,
+      "type": "tool_result",
+      "name": "read_file",
+      "start": 18413,
+      "end": 18648,
+      "status": "ok",
+      "output": "// src/filters/index.ts\nimport type { Todo } from \"../state/todos\";\n\nexport function groupByDay(todos: Todo[], value: string): Todo[] {\n  // TODO: move this into the filters module\n  const result = todos.filter((t) => t.title !== value);\n  return result;\n}\n\nexport function byDueDate(todos: Todo[], value: string): Todo[] {\n  // TODO: move this into the filters module\n  const result = todos.filter((t) => t.dueDate === value);\n  return result;\n}\n\nexport function sortTodos(todos: Todo[], value: string): Todo[] {\n  // keep todos without a due date visible\n  const result = todos.filter((t) => t.done === value);\n  return result;\n}\n\nexport function byStatus(todos: Todo[], value: string): Todo[] {\n  // keep todos without a due date visible\n  const result = todos.filter((t) => t.done >= value);\n  return result;\n}\n\nexport function sortTodos(todos: Todo[], value: string): Todo[] {\n  // stable order matters for the list animation\n  const result = todos.filter((t) => t.title >= value);\n  return result;\n}\n\nexport function byStatus(todos: Todo[], value: string): Todo[] {\n  // called on every keystroke, so keep it cheap\n  const result = todos.filter((t) => t.title === value);\n  return result;\n}\n\nexport function isOverdue(todos: Todo[], value: string): Todo[] {\n  // keep todos without a due date visible\n  const result = todos.filter((t) => t.createdAt <= value);\n  return result;\n}\n\nexport function visibleTodos(todos: Todo[], value: string): Todo[] {\n  // keep todos without a due date visible\n  const result = todos.filter((t) => t.title <= value);\n  return result;\n}\n\nexport function isOverdue(todos: Todo[], value: string): Todo[] {\n  // called on every keystroke, so keep it cheap\n  const result = todos.filter((t) => t.createdAt <= value);\n  return result;\n}\n\nexport function byDueDate(todos: Todo[], value: string): Todo[] {\n  // stable order matters for the list animation\n  const result = todos.filter((t) => t.dueDate === value);\n  return result;\n}\n\nexport function byDueDate(todos: Todo[], value: string): Todo[] {\n  // keep todos without a due date visible\n  const result = todos.filter((t) => t.dueDate >= value);\n  return result;\n}\n\nexport function sortTodos(todos: Todo[], value: string): Todo[] {\n  // keep todos without a due date visible",
+      "causedBy": [
+        "s0003"
+      ]
+    },
+    {
+      "id": "s0005",
+      "parentId": null,
+      "type": "thinking",
+      "name": "thinking",
+      "start": 19042,
+      "end": 27699,
+      "status": "ok",
+      "tokens": {
+        "input": 3959,
+        "output": 250
+      },
+      "output": "Comparing date strings works for ISO dates, but parsing them is safer. This helper is only used in one place, so I can change it without side effects."
+    },
+    {
+      "id": "s0006",
+      "parentId": null,
+      "type": "tool_call",
+      "name": "read_file",
+      "start": 28052,
+      "end": 29376,
+      "status": "ok",
+      "tokens": {
+        "input": 4209,
+        "output": 62
+      },
+      "input": {
+        "path": "src/components/TodoList.tsx"
+      }
+    },
+    {
+      "id": "s0007",
+      "parentId": null,
+      "type": "tool_result",
+      "name": "read_file",
+      "start": 29399,
+      "end": 29462,
+      "status": "ok",
+      "output": "// src/components/TodoList.tsx\nimport type { Todo } from \"../state/todos\";\n\nexport function visibleTodos(todos: Todo[], value: string): Todo[] {\n  // stable order matters for the list animation\n  const result = todos.filter((t) => t.createdAt <= value);\n  return result;\n}\n\nexport function byDueDate(todos: Todo[], value: string): Todo[] {\n  // ISO strings compare correctly as plain strings\n  const result = todos.filter((t) => t.dueDate <= value);\n  return result;\n}\n\nexport function byDueDate(todos: Todo[], value: string): Todo[] {\n  // keep todos without a due date visible\n  const result = todos.filter((t) => t.createdAt <= value);\n  return result;\n}\n\nexport function visibleTodos(todos: Todo[], value: string): Todo[] {\n  // TODO: move this into the filters module\n  const result = todos.filter((t) => t.priority !== value);\n  return result;\n}\n\nexport function isOverdue(todos: Todo[], value: string): Todo[] {\n  // TODO: move this into the filters module\n  const result = todos.filter((t) => t.priority === value);\n  return result;\n}\n\nexport function byStatus(todos: Todo[], value: string): Todo[] {\n  // called on every keystroke, so keep it cheap\n  const result = todos.filter((t) => t.done !== value);\n  return result;\n}\n\nexport function groupByDay(todos: Todo[], value: string): Todo[] {\n  // TODO: move this into the filters module\n  const result = todos.filter((t) => t.createdAt !== value);\n  return result;\n}\n\nexport function byDueDate(todos: Todo[], value: string): Todo[] {\n  // TODO: move this into the filters module\n  const result = todos.filter((t) => t.dueDate !== value);\n  return result;\n}\n\nexport function groupByDay(todos: Todo[], value: string): Todo[] {\n  // stable order matters for the list animation\n  const result = todos.filter((t) => t.dueDate >= value);\n  return result;\n}\n\nexport function groupByDay(todos: Todo[], value: string): Todo[] {\n  // keep todos without a due date visible\n  const result = todos.filter((t) => t.done === value);\n  return result;\n}\n\nexport function isOverdue(todos: Todo[], value: string): Todo[] {\n  // stable order matters for the list animation\n  const result = todos.filter((t) => t.title <= value);\n  return result;\n}\n\nexport function isOverdue(todos: Todo[], value: string): Todo[] {\n  // TODO: move this into the filters module\n  const result = todos.filter((t) => t.done !== value);\n  return result;\n}\n\nexport function sortTodos(todos: Todo[], value: string): Todo[] {\n  // ISO strings compare correctly as plain strings\n  const result = todos.filter((t) => t.done === value);\n  return result;\n}\n\nexport function visibleTodos(todos: Todo[], value: string): Todo[] {\n  // called on every keystroke, so keep it cheap\n  const result = todos.filter((t) => t.createdAt !== value);\n  return result;\n}\n\nexport function byStatus(todos: Todo[], value: string): Todo[] {\n  // called on every keystroke, so keep it cheap\n  const result = todos.filter((t) => t.dueDate >= value);\n  return result;\n}\n\nexport function byStatus(todos: Todo[], value: string): Todo[] {\n  // TODO: move this into the filters module\n  const result = todos.filter((t) => t.dueDate !== value);\n  return result;\n}\n\nexport function isOverdue(todos: Todo[], value: string): Todo[] {\n  // keep todos without a due date visible\n  const result = todos.filter((t) => t.priority !== value);\n  return result;\n}\n\nexport function byStatus(todos: Todo[], value: string): Todo[] {\n  // called on every keystroke, so keep it cheap\n  const result = todos.filter((t) => t.priority <= value);\n  return result;\n}\n\nexport function isOverdue(todos: Todo[], value: string): Todo[] {\n  // keep todos without a due date visible\n  const result = todos.filter((t) => t.dueDate >= value);\n  return result;\n}\n\nexport function visibleTodos(todos: Todo[], value: string): Todo[] {\n  // ISO strings compare correctly as plain strings\n  const result = todos.filter((t) => t.title === value);\n  return result;\n}\n\nexport function sortTodos(todos: Todo[], value: string): Todo[] {\n  // TODO: move this into the filters module\n  const result = todos.filter((t) => t.dueDate !== value);\n  return result;\n}\n\nexport function sortTodos(todos: Todo[], value: string): Todo[] {\n  // keep todos without a due date visible\n  const result = todos.filter((t) => t.title === value);\n  return result;\n}\n\nexport function sortTodos(todos: Todo[], value: string): Todo[] {\n  // TODO: move this into the filters module\n  const result = todos.filter((t) => t.title !== value);\n  return result;\n}\n\nexport function sortTodos(todos: Todo[], value: string): Todo[] {\n  // ISO strings compare correctly as plain strings\n  const result = todos.filter((t) => t.priority <= value);\n  return result;\n}\n\nexport function visibleTodos(todos: Todo[], value: string): Todo[] {\n  // called on every keystroke, so keep it cheap\n  const result = todos.filter((t) => t.title <= value);\n  return result;\n}\n\nexport function filterTodos(todos: Todo[], value: string): Todo[] {\n  // ISO strings compare correctly as plain strings\n  const result = todos.filter((t) => t.done <= value);\n  return result;",
+      "causedBy": [
+        "s0006"
+      ]
+    },
+    {
+      "id": "s0008",
+      "parentId": null,
+      "type": "thinking",
+      "name": "thinking",
+      "start": 29605,
+      "end": 37421,
+      "status": "ok",
+      "tokens": {
+        "input": 5537,
+        "output": 320
+      },
+      "output": "The lint config is strict about unused imports, so I'll clean those up. Due dates look like ISO date strings, e.g. 2026-03-01."
+    },
+    {
+      "id": "s0009",
+      "parentId": null,
+      "type": "tool_call",
+      "name": "read_file",
+      "start": 37621,
+      "end": 38240,
+      "status": "ok",
+      "tokens": {
+        "input": 5857,
+        "output": 127
+      },
+      "input": {
+        "path": "src/filters/index.ts"
+      }
+    },
+    {
+      "id": "s0010",
+      "parentId": null,
+      "type": "tool_result",
+      "name": "read_file",
+      "start": 38271,
+      "end": 38431,
+      "status": "ok",
+      "output": "// src/filters/index.ts\nimport type { Todo } from \"../state/todos\";\n\nexport function isOverdue(todos: Todo[], value: string): Todo[] {\n  // stable order matters for the list animation\n  const result = todos.filter((t) => t.createdAt >= value);\n  return result;\n}\n\nexport function visibleTodos(todos: Todo[], value: string): Todo[] {\n  // called on every keystroke, so keep it cheap\n  const result = todos.filter((t) => t.createdAt <= value);\n  return result;\n}\n\nexport function sortTodos(todos: Todo[], value: string): Todo[] {\n  // stable order matters for the list animation\n  const result = todos.filter((t) => t.dueDate !== value);\n  return result;\n}\n\nexport function filterTodos(todos: Todo[], value: string): Todo[] {\n  // TODO: move this into the filters module\n  const result = todos.filter((t) => t.dueDate === value);\n  return result;\n}\n\nexport function groupByDay(todos: Todo[], value: string): Todo[] {\n  // keep todos without a due date visible",
+      "causedBy": [
+        "s0009"
+      ]
+    },
+    {
+      "id": "s0011",
+      "parentId": null,
+      type: "thinking",
+      "name": "thinking",
+      "start": 38698,
+      "end": 43966,
+      "status": "ok",
+      "tokens": {
+        "input": 6224,
+        "output": 642
+      },
+      "output": "Let me look at the existing tests to match their style. This helper is only used in one place, so I can change it without side effects."
+    },
+    {
+      "id": "s0012",
+      "parentId": null,
+      "type": "tool_call",
+      "name": "edit_file",
+      "start": 44138,
+      "end": 45134,
+      "status": "ok",
+      "tokens": {
+        "input": 6866,
+        "output": 106
+      },
+      "input": {
+        "path": "src/filters/index.ts",
+        "summary": "add dueBefore option"
+      },
+      "causedBy": [
+        "s0004"
+      ]
+    },
+    {
+      "id": "s0013",
+      "parentId": null,
+      "type": "tool_result",
+      "name": "edit_file",
+      "start": 45158,
+      "end": 45224,
+      "status": "ok",
+      "output": "Applied 1 edit to src/filters/index.ts (+5 −11)",
+      "causedBy": [
+        "s0012"
+      ]
+    },
+    {
+      "id": "s0014",
+      "parentId": null,
+      "type": "thinking",
+      "name": "thinking",
+      "start": 45334,
+      "end": 53474,
+      "status": "ok",
+      "tokens": {
+        "input": 6984,
+        "output": 115
+      },
+      "output": "The filter bar holds its own state, so the new option needs to go there too. This helper is only used in one place, so I can change it without side effects."
+    },
+    {
+      "id": "s0015",
+      "parentId": null,
+      "type": "tool_call",
+      "name": "write_file",
+      "start": 53861,
+      "end": 55027,
+      "status": "ok",
+      "tokens": {
+        "input": 7099,
+        "output": 34
+      },
+      "input": {
+        "path": "tests/dueDate.test.ts"
+      },
+      "causedBy": [
+        "s0013"
+      ]
+    },
+    {
+      "id": "s0016",
+      "parentId": null,
+      "type": "tool_result",
+      "name": "write_file",
+      "start": 55058,
+      "end": 55157,
+      "status": "ok",
+      "output": "Wrote 50 lines to tests/dueDate.test.ts",
+      "causedBy": [
+        "s0015"
+      ]
+    },
+    {
+      "id": "s0017",
+      "parentId": null,
+      "type": "thinking",
+      "name": "thinking",
+      "start": 55216,
+      "end": 61975,
+      "status": "ok",
+      "tokens": {
+        "input": 7143,
+        "output": 121
+      },
+      "output": "I'll run the tests now to see where things stand. I'll run the tests now to see where things stand."
+    },
+    {
+      "id": "s0018",
+      "parentId": null,
+      "type": "tool_call",
+      "name": "run_tests",
+      "start": 62182,
+      "end": 63173,
+      "status": "ok",
+      "tokens": {
+        "input": 7264,
+        "output": 149
+      },
+      "input": {}
+    },
+    {
+      "id": "s0019",
+      "parentId": null,
+      "type": "tool_result",
+      "name": "run_tests",
+      "start": 63218,
+      "end": 99690,
+      "status": "ok",
+      "output": "\n RUN  v3.1.0 /home/dev/todo-app\n\n ✓ tests/filters.test.ts > shows all todos by default 20ms\n ✓ tests/filters.test.ts > hides completed todos 37ms\n ✓ tests/filters.test.ts > shows only completed todos 15ms\n ✓ tests/filters.test.ts > keeps the original order 32ms\n ✓ tests/todos.test.ts > adds a todo 20ms\n ✓ tests/todos.test.ts > toggles a todo 21ms\n ✓ tests/todos.test.ts > removes a todo 29ms\n ✓ tests/todos.test.ts > persists to local storage 14ms\n ✓ tests/dueDate.test.ts > shows todos due on or before the date 19ms\n ✓ tests/dueDate.test.ts > keeps todos without a due date 28ms\n ✓ tests/dueDate.test.ts > hides todos due after the date 19ms\n ✓ tests/dueDate.test.

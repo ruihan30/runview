@@ -1,0 +1,2868 @@
+{
+  "resourceSpans": [
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "service.name",
+            "value": {
+              "stringValue": "runview-synthetic"
+            }
+          },
+          {
+            "key": "runview.semconv_version",
+            "value": {
+              "stringValue": "1.37.0"
+            }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "runview-generator",
+            "version": "0.1.0"
+          },
+          "schemaUrl": "https://opentelemetry.io/schemas/1.37.0",
+          "spans": [
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "889a748244c5b451",
+              "name": "invoke_agent todo-agent",
+              "kind": 1,
+              "startTimeUnixNano": "1768467600000000000",
+              "endTimeUnixNano": "1768467781401000000",
+              "attributes": [
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "invoke_agent"
+                  }
+                },
+                {
+                  "key": "gen_ai.agent.name",
+                  "value": {
+                    "stringValue": "todo-agent"
+                  }
+                },
+                {
+                  "key": "runview.run.id",
+                  "value": {
+                    "stringValue": "loop"
+                  }
+                },
+                {
+                  "key": "runview.run.task",
+                  "value": {
+                    "stringValue": "Add a due-date filter to the to-do app and make the tests pass"
+                  }
+                },
+                {
+                  "key": "runview.run.outcome",
+                  "value": {
+                    "stringValue": "failure"
+                  }
+                }
+              ],
+              "status": {
+                "code": 2
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "bfc25aa52279da63",
+              "parentSpanId": "889a748244c5b451",
+              "name": "user_input",
+              "kind": 1,
+              "startTimeUnixNano": "1768467600147000000",
+              "endTimeUnixNano": "1768467600147000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0001"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "user"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "user"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "runview.step.input",
+                  "value": {
+                    "stringValue": "Add a due-date filter to the to-do app and make the tests pass"
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "d63fb268a6d377a2",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467600537000000",
+              "endTimeUnixNano": "1768467606702000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0002"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "3216"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "181"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "The filter bar holds its own state, so the new option needs to go there too."
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "6bd3c61e33f2ea09",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467607000000000",
+              "endTimeUnixNano": "1768467608351000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0003"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_call"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "read_file"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "read_file"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "3397"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "120"
+                  }
+                },
+                {
+                  "key": "runview.step.input",
+                  "value": {
+                    "stringValue": "{\"path\":\"src/filters/index.ts\"}"
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "9209f00ddddf08d8",
+              "parentSpanId": "889a748244c5b451",
+              "name": "execute_tool read_file",
+              "kind": 1,
+              "startTimeUnixNano": "1768467608397000000",
+              "endTimeUnixNano": "1768467608511000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0004"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_result"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "read_file"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "execute_tool"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "read_file"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.call.id",
+                  "value": {
+                    "stringValue": "s0003"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "// src/filters/index.ts\nimport type { Todo } from \"../state/todos\";\n\nexport function visibleTodos(todos: Todo[], value: string): Todo[] {\n  // TODO: move this into the filters module\n  const result = todos.filter((t) => t.priority !== value);\n  return result;\n}\n\nexport function isOverdue(todos: Todo[], value: string): Todo[] {\n  // stable order matters for the list animation\n  const result = todos.filter((t) => t.dueDate <= value);\n  return result;\n}\n\nexport function byDueDate(todos: Todo[], value: string): Todo[] {\n  // keep todos without a due date visible\n  const result = todos.filter((t) => t.title !== value);\n  return result;\n}\n\nexport function sortTodos(todos: Todo[], value: string): Todo[] {\n  // keep todos without a due date visible\n  const result = todos.filter((t) => t.createdAt >= value);\n  return result;\n}\n\nexport function byDueDate(todos: Todo[], value: string): Todo[] {\n  // TODO: move this into the filters module\n  const result = todos.filter((t) => t.dueDate === value);\n  return result;\n}\n\nexport function groupByDay(todos: Todo[], value: string): Todo[] {\n  // TODO: move this into the filters module\n  const result = todos.filter((t) => t.dueDate === value);\n  return result;\n}\n\nexport function visibleTodos(todos: Todo[], value: string): Todo[] {\n  // called on every keystroke, so keep it cheap\n  const result = todos.filter((t) => t.priority !== value);\n  return result;\n}\n\nexport function byStatus(todos: Todo[], value: string): Todo[] {\n  // TODO: move this into the filters module\n  const result = todos.filter((t) => t.createdAt === value);\n  return result;\n}\n\nexport function isOverdue(todos: Todo[], value: string): Todo[] {\n  // keep todos without a due date visible\n  const result = todos.filter((t) => t.priority !== value);\n  return result;\n}\n\nexport function visibleTodos(todos: Todo[], value: string): Todo[] {\n  // TODO: move this into the filters module\n  const result = todos.filter((t) => t.createdAt >= value);\n  return result;\n}\n\nexport function byDueDate(todos: Todo[], value: string): Todo[] {\n  // ISO strings compare correctly as plain strings\n  const result = todos.filter((t) => t.createdAt !== value);\n  return result;\n}\n\nexport function groupByDay(todos: Todo[], value: string): Todo[] {\n  // ISO strings compare correctly as plain strings\n  const result = todos.filter((t) => t.done <= value);\n  return result;\n}\n\nexport function isOverdue(todos: Todo[], value: string): Todo[] {\n  // keep todos without a due date visible\n  const result = todos.filter((t) => t.priority !== value);\n  return result;\n}\n\nexport function groupByDay(todos: Todo[], value: string): Todo[] {\n  // stable order matters for the list animation\n  const result = todos.filter((t) => t.priority !== value);\n  return result;\n}\n\nexport function groupByDay(todos: Todo[], value: string): Todo[] {\n  // ISO strings compare correctly as plain strings\n  const result = todos.filter((t) => t.createdAt >= value);\n  return result;\n}\n\nexport function isOverdue(todos: Todo[], value: string): Todo[] {\n  // called on every keystroke, so keep it cheap\n  const result = todos.filter((t) => t.done !== value);\n  return result;\n}\n\nexport function visibleTodos(todos: Todo[], value: string): Todo[] {\n  // TODO: move this into the filters module\n  const result = todos.filter((t) => t.priority === value);\n  return result;\n}\n\nexport function filterTodos(todos: Todo[], value: string): Todo[] {\n  // keep todos without a due date visible\n  const result = todos.filter((t) => t.done <= value);\n  return result;\n}\n\nexport function filterTodos(todos: Todo[], value: string): Todo[] {\n  // called on every keystroke, so keep it cheap\n  const result = todos.filter((t) => t.priority <= value);\n  return result;\n}\n\nexport function byDueDate(todos: Todo[], value: string): Todo[] {\n  // stable order matters for the list animation\n  const result = todos.filter((t) => t.dueDate >= value);\n  return result;\n}"
+                  }
+                },
+                {
+                  "key": "runview.step.caused_by",
+                  "value": {
+                    "arrayValue": {
+                      "values": [
+                        {
+                          "stringValue": "s0003"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "7c9dfd8f8a8fa547",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467608761000000",
+              "endTimeUnixNano": "1768467616738000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0005"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "4497"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "208"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "I'll put the due-date logic in its own file."
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "9266031a979ae78c",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467617010000000",
+              "endTimeUnixNano": "1768467618327000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0006"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_call"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "edit_file"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "edit_file"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "4705"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "113"
+                  }
+                },
+                {
+                  "key": "runview.step.input",
+                  "value": {
+                    "stringValue": "{\"path\":\"src/filters/dueDate.ts\",\"summary\":\"new dueBefore filter\"}"
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "109a0395ece48111",
+              "parentSpanId": "889a748244c5b451",
+              "name": "execute_tool edit_file",
+              "kind": 1,
+              "startTimeUnixNano": "1768467618347000000",
+              "endTimeUnixNano": "1768467618463000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0007"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_result"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "edit_file"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "execute_tool"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "edit_file"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.call.id",
+                  "value": {
+                    "stringValue": "s0006"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "Applied 1 edit to src/filters/dueDate.ts (+24 −11)"
+                  }
+                },
+                {
+                  "key": "runview.step.caused_by",
+                  "value": {
+                    "arrayValue": {
+                      "values": [
+                        {
+                          "stringValue": "s0006"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "c938f738338b8f34",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467618502000000",
+              "endTimeUnixNano": "1768467625179000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0008"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "4831"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "286"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "I'll run the tests now to see where things stand."
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "befa8d88fe61e507",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467625496000000",
+              "endTimeUnixNano": "1768467626258000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0009"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_call"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "list_files"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "list_files"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "5117"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "93"
+                  }
+                },
+                {
+                  "key": "runview.step.input",
+                  "value": {
+                    "stringValue": "{\"path\":\"src/components\"}"
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "4b10b52dcd2ca63c",
+              "parentSpanId": "889a748244c5b451",
+              "name": "execute_tool list_files",
+              "kind": 1,
+              "startTimeUnixNano": "1768467626315000000",
+              "endTimeUnixNano": "1768467626435000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0010"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_result"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "list_files"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "execute_tool"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "list_files"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.call.id",
+                  "value": {
+                    "stringValue": "s0009"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "FilterBar.tsx\nTodoItem.tsx\nTodoList.tsx"
+                  }
+                },
+                {
+                  "key": "runview.step.caused_by",
+                  "value": {
+                    "arrayValue": {
+                      "values": [
+                        {
+                          "stringValue": "s0009"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "44c923a1756de678",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467626627000000",
+              "endTimeUnixNano": "1768467632778000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0011"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "5220"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "1009"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "I'll run the tests now to see where things stand."
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "a5dd87372b904f78",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467633101000000",
+              "endTimeUnixNano": "1768467634484000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0012"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_call"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "list_files"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "list_files"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "6229"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "136"
+                  }
+                },
+                {
+                  "key": "runview.step.input",
+                  "value": {
+                    "stringValue": "{\"path\":\"src/filters\"}"
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "ea6c20eaa4f6c9c4",
+              "parentSpanId": "889a748244c5b451",
+              "name": "execute_tool list_files",
+              "kind": 1,
+              "startTimeUnixNano": "1768467634515000000",
+              "endTimeUnixNano": "1768467634585000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0013"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_result"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "list_files"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "execute_tool"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "list_files"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.call.id",
+                  "value": {
+                    "stringValue": "s0012"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "index.ts\nstatus.ts"
+                  }
+                },
+                {
+                  "key": "runview.step.caused_by",
+                  "value": {
+                    "arrayValue": {
+                      "values": [
+                        {
+                          "stringValue": "s0012"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "1693ccfec081e48e",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467634826000000",
+              "endTimeUnixNano": "1768467640953000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0014"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "6370"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "126"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "Let me check it compiles."
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "e97fdcf81e131c9f",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467641327000000",
+              "endTimeUnixNano": "1768467642335000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0015"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_call"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "6496"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "38"
+                  }
+                },
+                {
+                  "key": "runview.step.input",
+                  "value": {
+                    "stringValue": "{\"command\":\"npm run build\"}"
+                  }
+                },
+                {
+                  "key": "runview.step.caused_by",
+                  "value": {
+                    "arrayValue": {
+                      "values": [
+                        {
+                          "stringValue": "s0007"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "2bcfcef466b004bd",
+              "parentSpanId": "889a748244c5b451",
+              "name": "execute_tool run_command",
+              "kind": 1,
+              "startTimeUnixNano": "1768467642360000000",
+              "endTimeUnixNano": "1768467650771000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0016"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_result"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "error"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "execute_tool"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.call.id",
+                  "value": {
+                    "stringValue": "s0015"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "> todo-app@0.3.0 build\n> tsc -p tsconfig.json && vite build\n\nsrc/filters/dueDate.ts:12:27 - error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.\n  Type 'undefined' is not assignable to type 'string'.\n\n12   return todos.filter((t) => isBefore(t.dueDate, options.dueBefore));\n                             ~~~~~~~~~\n\nFound 1 error in src/filters/dueDate.ts:12"
+                  }
+                },
+                {
+                  "key": "runview.step.caused_by",
+                  "value": {
+                    "arrayValue": {
+                      "values": [
+                        {
+                          "stringValue": "s0015"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "status": {
+                "code": 2,
+                "message": "Command failed with exit code 2: npm run build"
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "c176fc4d97eb4e73",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467650971000000",
+              "endTimeUnixNano": "1768467657291000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0017"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "6635"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "187"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "There's a type error. Let me run the build again to be sure."
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "1dc481c4dd3abb6e",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467657450000000",
+              "endTimeUnixNano": "1768467658804000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0018"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_call"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "6822"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "128"
+                  }
+                },
+                {
+                  "key": "runview.step.input",
+                  "value": {
+                    "stringValue": "{\"command\":\"npm run build\"}"
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "ff04f6e39b9f4afb",
+              "parentSpanId": "889a748244c5b451",
+              "name": "execute_tool run_command",
+              "kind": 1,
+              "startTimeUnixNano": "1768467658814000000",
+              "endTimeUnixNano": "1768467660886000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0019"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_result"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "error"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "execute_tool"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.call.id",
+                  "value": {
+                    "stringValue": "s0018"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "> todo-app@0.3.0 build\n> tsc -p tsconfig.json && vite build\n\nsrc/filters/dueDate.ts:12:27 - error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.\n  Type 'undefined' is not assignable to type 'string'.\n\n12   return todos.filter((t) => isBefore(t.dueDate, options.dueBefore));\n                             ~~~~~~~~~\n\nFound 1 error in src/filters/dueDate.ts:12"
+                  }
+                },
+                {
+                  "key": "runview.step.caused_by",
+                  "value": {
+                    "arrayValue": {
+                      "values": [
+                        {
+                          "stringValue": "s0018"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "status": {
+                "code": 2,
+                "message": "Command failed with exit code 2: npm run build"
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "a9a43abbe634f626",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467660967000000",
+              "endTimeUnixNano": "1768467668108000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0020"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "7051"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "138"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "Trying the build once more."
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "cbae7ff794b52fda",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467668352000000",
+              "endTimeUnixNano": "1768467669780000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0021"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_call"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "7189"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "22"
+                  }
+                },
+                {
+                  "key": "runview.step.input",
+                  "value": {
+                    "stringValue": "{\"command\":\"npm run build\"}"
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "66dafd1a3bc49c84",
+              "parentSpanId": "889a748244c5b451",
+              "name": "execute_tool run_command",
+              "kind": 1,
+              "startTimeUnixNano": "1768467669787000000",
+              "endTimeUnixNano": "1768467672108000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0022"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_result"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "error"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "execute_tool"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.call.id",
+                  "value": {
+                    "stringValue": "s0021"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "> todo-app@0.3.0 build\n> tsc -p tsconfig.json && vite build\n\nsrc/filters/dueDate.ts:12:27 - error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.\n  Type 'undefined' is not assignable to type 'string'.\n\n12   return todos.filter((t) => isBefore(t.dueDate, options.dueBefore));\n                             ~~~~~~~~~\n\nFound 1 error in src/filters/dueDate.ts:12"
+                  }
+                },
+                {
+                  "key": "runview.step.caused_by",
+                  "value": {
+                    "arrayValue": {
+                      "values": [
+                        {
+                          "stringValue": "s0021"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "status": {
+                "code": 2,
+                "message": "Command failed with exit code 2: npm run build"
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "0d3ac84879bb35b2",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467672365000000",
+              "endTimeUnixNano": "1768467681295000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0023"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "7312"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "273"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "Trying the build once more."
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "6f6e9cf143e09c0c",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467681335000000",
+              "endTimeUnixNano": "1768467682703000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0024"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_call"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "7585"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "122"
+                  }
+                },
+                {
+                  "key": "runview.step.input",
+                  "value": {
+                    "stringValue": "{\"command\":\"npm run build\"}"
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "6cadcf2c8aac9182",
+              "parentSpanId": "889a748244c5b451",
+              "name": "execute_tool run_command",
+              "kind": 1,
+              "startTimeUnixNano": "1768467682736000000",
+              "endTimeUnixNano": "1768467692117000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0025"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_result"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "error"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "execute_tool"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.call.id",
+                  "value": {
+                    "stringValue": "s0024"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "> todo-app@0.3.0 build\n> tsc -p tsconfig.json && vite build\n\nsrc/filters/dueDate.ts:12:27 - error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.\n  Type 'undefined' is not assignable to type 'string'.\n\n12   return todos.filter((t) => isBefore(t.dueDate, options.dueBefore));\n                             ~~~~~~~~~\n\nFound 1 error in src/filters/dueDate.ts:12"
+                  }
+                },
+                {
+                  "key": "runview.step.caused_by",
+                  "value": {
+                    "arrayValue": {
+                      "values": [
+                        {
+                          "stringValue": "s0024"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "status": {
+                "code": 2,
+                "message": "Command failed with exit code 2: npm run build"
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "71c7b5c2a79f1214",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467692395000000",
+              "endTimeUnixNano": "1768467699954000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0026"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "7808"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "228"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "The build should pass now."
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "4b3ff3860b2eec8b",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467700060000000",
+              "endTimeUnixNano": "1768467700777000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0027"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_call"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "8036"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "44"
+                  }
+                },
+                {
+                  "key": "runview.step.input",
+                  "value": {
+                    "stringValue": "{\"command\":\"npm run build\"}"
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "97960bd6be147775",
+              "parentSpanId": "889a748244c5b451",
+              "name": "execute_tool run_command",
+              "kind": 1,
+              "startTimeUnixNano": "1768467700828000000",
+              "endTimeUnixNano": "1768467712232000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0028"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_result"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "error"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "execute_tool"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.call.id",
+                  "value": {
+                    "stringValue": "s0027"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "> todo-app@0.3.0 build\n> tsc -p tsconfig.json && vite build\n\nsrc/filters/dueDate.ts:12:27 - error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.\n  Type 'undefined' is not assignable to type 'string'.\n\n12   return todos.filter((t) => isBefore(t.dueDate, options.dueBefore));\n                             ~~~~~~~~~\n\nFound 1 error in src/filters/dueDate.ts:12"
+                  }
+                },
+                {
+                  "key": "runview.step.caused_by",
+                  "value": {
+                    "arrayValue": {
+                      "values": [
+                        {
+                          "stringValue": "s0027"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "status": {
+                "code": 2,
+                "message": "Command failed with exit code 2: npm run build"
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "d2cdddeda6c2bfae",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467712446000000",
+              "endTimeUnixNano": "1768467720482000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0029"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "8181"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "1135"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "Maybe the cache is stale. One more try."
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "e46b72c7e4c9e76c",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467720810000000",
+              "endTimeUnixNano": "1768467729239000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0030"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_call"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "9316"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "110"
+                  }
+                },
+                {
+                  "key": "runview.step.input",
+                  "value": {
+                    "stringValue": "{\"command\":\"npm run build\"}"
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "b8a0eb00c6e171a9",
+              "parentSpanId": "889a748244c5b451",
+              "name": "execute_tool run_command",
+              "kind": 1,
+              "startTimeUnixNano": "1768467729283000000",
+              "endTimeUnixNano": "1768467733399000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0031"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_result"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "error"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "execute_tool"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.call.id",
+                  "value": {
+                    "stringValue": "s0030"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "> todo-app@0.3.0 build\n> tsc -p tsconfig.json && vite build\n\nsrc/filters/dueDate.ts:12:27 - error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.\n  Type 'undefined' is not assignable to type 'string'.\n\n12   return todos.filter((t) => isBefore(t.dueDate, options.dueBefore));\n                             ~~~~~~~~~\n\nFound 1 error in src/filters/dueDate.ts:12"
+                  }
+                },
+                {
+                  "key": "runview.step.caused_by",
+                  "value": {
+                    "arrayValue": {
+                      "values": [
+                        {
+                          "stringValue": "s0030"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "status": {
+                "code": 2,
+                "message": "Command failed with exit code 2: npm run build"
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "8758e8df6718f0b3",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467733569000000",
+              "endTimeUnixNano": "1768467740965000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0032"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "9527"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "107"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "Maybe the cache is stale. One more try."
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "a9b461a1c89ab943",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467741164000000",
+              "endTimeUnixNano": "1768467742645000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0033"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_call"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "9634"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "52"
+                  }
+                },
+                {
+                  "key": "runview.step.input",
+                  "value": {
+                    "stringValue": "{\"command\":\"npm run build\"}"
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "47bbf462de0b4bf5",
+              "parentSpanId": "889a748244c5b451",
+              "name": "execute_tool run_command",
+              "kind": 1,
+              "startTimeUnixNano": "1768467742654000000",
+              "endTimeUnixNano": "1768467753940000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0034"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_result"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "error"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "execute_tool"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.call.id",
+                  "value": {
+                    "stringValue": "s0033"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "> todo-app@0.3.0 build\n> tsc -p tsconfig.json && vite build\n\nsrc/filters/dueDate.ts:12:27 - error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.\n  Type 'undefined' is not assignable to type 'string'.\n\n12   return todos.filter((t) => isBefore(t.dueDate, options.dueBefore));\n                             ~~~~~~~~~\n\nFound 1 error in src/filters/dueDate.ts:12"
+                  }
+                },
+                {
+                  "key": "runview.step.caused_by",
+                  "value": {
+                    "arrayValue": {
+                      "values": [
+                        {
+                          "stringValue": "s0033"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "status": {
+                "code": 2,
+                "message": "Command failed with exit code 2: npm run build"
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "d2faf0f38a27ccc6",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467754063000000",
+              "endTimeUnixNano": "1768467758205000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0035"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "9787"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "89"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "Let me run the build again."
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "b57a0bc10adde658",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467758548000000",
+              "endTimeUnixNano": "1768467758989000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0036"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_call"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "9876"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "65"
+                  }
+                },
+                {
+                  "key": "runview.step.input",
+                  "value": {
+                    "stringValue": "{\"command\":\"npm run build\"}"
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "1ec888a5f36898b8",
+              "parentSpanId": "889a748244c5b451",
+              "name": "execute_tool run_command",
+              "kind": 1,
+              "startTimeUnixNano": "1768467759045000000",
+              "endTimeUnixNano": "1768467770497000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0037"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "tool_result"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "error"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "execute_tool"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.name",
+                  "value": {
+                    "stringValue": "run_command"
+                  }
+                },
+                {
+                  "key": "gen_ai.tool.call.id",
+                  "value": {
+                    "stringValue": "s0036"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "> todo-app@0.3.0 build\n> tsc -p tsconfig.json && vite build\n\nsrc/filters/dueDate.ts:12:27 - error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.\n  Type 'undefined' is not assignable to type 'string'.\n\n12   return todos.filter((t) => isBefore(t.dueDate, options.dueBefore));\n                             ~~~~~~~~~\n\nFound 1 error in src/filters/dueDate.ts:12"
+                  }
+                },
+                {
+                  "key": "runview.step.caused_by",
+                  "value": {
+                    "arrayValue": {
+                      "values": [
+                        {
+                          "stringValue": "s0036"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "status": {
+                "code": 2,
+                "message": "Command failed with exit code 2: npm run build"
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "7e391a292a7a8249",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467770850000000",
+              "endTimeUnixNano": "1768467777507000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0038"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "thinking"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "10042"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "172"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "The build should pass now."
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            },
+            {
+              "traceId": "0e254190b488d7c3cabaa22052019353",
+              "spanId": "dab7959554c02bd6",
+              "parentSpanId": "889a748244c5b451",
+              "name": "chat synthetic-model",
+              "kind": 3,
+              "startTimeUnixNano": "1768467777531000000",
+              "endTimeUnixNano": "1768467781401000000",
+              "attributes": [
+                {
+                  "key": "runview.step.id",
+                  "value": {
+                    "stringValue": "s0039"
+                  }
+                },
+                {
+                  "key": "runview.step.type",
+                  "value": {
+                    "stringValue": "message"
+                  }
+                },
+                {
+                  "key": "runview.step.name",
+                  "value": {
+                    "stringValue": "reply"
+                  }
+                },
+                {
+                  "key": "runview.step.status",
+                  "value": {
+                    "stringValue": "ok"
+                  }
+                },
+                {
+                  "key": "gen_ai.operation.name",
+                  "value": {
+                    "stringValue": "chat"
+                  }
+                },
+                {
+                  "key": "gen_ai.request.model",
+                  "value": {
+                    "stringValue": "synthetic-model"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.input_tokens",
+                  "value": {
+                    "intValue": "10214"
+                  }
+                },
+                {
+                  "key": "gen_ai.usage.output_tokens",
+                  "value": {
+                    "intValue": "51"
+                  }
+                },
+                {
+                  "key": "runview.step.output",
+                  "value": {
+                    "stringValue": "The build keeps failing with TS2345 in src/filters/dueDate.ts. I wasn't able to fix it."
+                  }
+                }
+              ],
+              "status": {
+                "code": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

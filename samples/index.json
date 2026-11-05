@@ -1,0 +1,166 @@
+{
+  "scenarios": [
+    {
+      "name": "happy-path",
+      "description": "Baseline: the agent finds the right file, makes the change, and the tests pass.",
+      "outcome": "success",
+      "steps": 15,
+      "untimed": false,
+      "files": {
+        "normalised": "happy-path.run.json",
+        "otel": "happy-path.otel.json"
+      },
+      "answerKey": {
+        "note": "Nothing planted; the baseline run."
+      }
+    },
+    {
+      "name": "error-recovery",
+      "description": "read_file on a wrong path fails; the agent lists the folder and recovers.",
+      "outcome": "success",
+      "steps": 26,
+      "untimed": false,
+      "files": {
+        "normalised": "error-recovery.run.json",
+        "otel": "error-recovery.otel.json"
+      },
+      "answerKey": {
+        "failure": "s0004",
+        "note": "The failed read on a wrong path; the agent recovers on its own."
+      }
+    },
+    {
+      "name": "silent-bad-result",
+      "description": "A search returns the wrong file; the agent edits it; the tests fail much later.",
+      "outcome": "failure",
+      "steps": 60,
+      "untimed": false,
+      "files": {
+        "normalised": "silent-bad-result.run.json",
+        "otel": "silent-bad-result.otel.json"
+      },
+      "answerKey": {
+        "failure": "s0033",
+        "cause": "s0007",
+        "note": "The search lists src/legacy/filter.ts first. The app imports src/filters/index.ts, so the edits never take effect."
+      }
+    },
+    {
+      "name": "loop",
+      "description": "The agent runs the same failing build 8 times without changing anything.",
+      "outcome": "failure",
+      "steps": 39,
+      "untimed": false,
+      "files": {
+        "normalised": "loop.run.json",
+        "otel": "loop.otel.json"
+      },
+      "answerKey": {
+        "failure": "s0019",
+        "cause": "s0016",
+        "note": "The loop starts at the first repeat: the same command, the same error, and nothing changed in between."
+      }
+    },
+    {
+      "name": "slow-step",
+      "description": "One test run hangs for 90 s and times out; the agent reruns a narrower set.",
+      "outcome": "success",
+      "steps": 29,
+      "untimed": false,
+      "files": {
+        "normalised": "slow-step.run.json",
+        "otel": "slow-step.otel.json"
+      },
+      "answerKey": {
+        "failure": "s0025",
+        "note": "The timed-out test run: 90 s in watch mode."
+      }
+    },
+    {
+      "name": "subagents",
+      "description": "Three sub-agents run in parallel; one fails and the parent carries on with its bad guess.",
+      "outcome": "failure",
+      "steps": 74,
+      "untimed": false,
+      "files": {
+        "normalised": "subagents.run.json",
+        "otel": "subagents.otel.json"
+      },
+      "answerKey": {
+        "failure": "s0073",
+        "cause": "s0023",
+        "note": "The explore-dates sub-agent failed and guessed 'Unix timestamps'. Due dates are ISO strings, so every comparison is false."
+      }
+    },
+    {
+      "name": "token-blowup",
+      "description": "Reading a huge seed-data file multiplies the input tokens of every later model call.",
+      "outcome": "success",
+      "steps": 33,
+      "untimed": false,
+      "files": {
+        "normalised": "token-blowup.run.json",
+        "otel": "token-blowup.otel.json"
+      },
+      "answerKey": {
+        "cause": "s0007",
+        "note": "The 2,500-line read stays in context, so every later model call pays for it. The run succeeds but costs far more than it should."
+      }
+    },
+    {
+      "name": "large-run",
+      "description": "A long run of mixed steps with one failure in the middle, for performance and scroll tests.",
+      "outcome": "success",
+      "steps": 626,
+      "untimed": false,
+      "files": {
+        "normalised": "large-run.run.json",
+        "otel": "large-run.otel.json"
+      },
+      "answerKey": {
+        "failure": "s0335",
+        "cause": "s0332",
+        "note": "The one failure: a switch to local-time parsing breaks a test; reverted to UTC."
+      }
+    },
+    {
+      "name": "untimed",
+      "description": "Scenario 3 (silent bad result) with no timestamps, as some trajectory formats have.",
+      "outcome": "failure",
+      "steps": 60,
+      "untimed": true,
+      "files": {
+        "normalised": "untimed.run.json"
+      },
+      "answerKey": {
+        "failure": "s0033",
+        "cause": "s0007",
+        "note": "The search lists src/legacy/filter.ts first. The app imports src/filters/index.ts, so the edits never take effect."
+      }
+    },
+    {
+      "name": "broken-file",
+      "description": "Invalid JSON on one line and a truncated last line. The parser should show a clear error.",
+      "outcome": "success",
+      "steps": 20,
+      "untimed": false,
+      "files": {
+        "normalised": "broken-file.run.json",
+        "otel": "broken-file.otel.json"
+      },
+      "answerKey": {
+        "note": "The files are damaged on purpose; see `corruption` in samples/index.json for where."
+      },
+      "corruption": {
+        "normalised": {
+          "invalidLine": 149,
+          "truncated": true
+        },
+        "otel": {
+          "invalidLine": 759,
+          "truncated": true
+        }
+      }
+    }
+  ]
+}
